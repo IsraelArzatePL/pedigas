@@ -1,0 +1,34 @@
+@import './vars';
+
+a {
+    display: inline-block;
+    font-weight: 700;
+    color: $main;
+    transition: $trans;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+span,
+strong,
+time,
+sub {
+    display: inline-block;
+    width: auto;
+}
+
+small {
+    display: inline-block;
+    font-size: $fs-xs;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: $trans;
+}

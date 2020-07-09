@@ -1,0 +1,47 @@
+@import './vars';
+
+.panel {
+    width: 100%;
+    background-color: white;
+    box-shadow: $sh;
+    position: relative;
+    header {
+        width: 100%;
+        padding: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        > .title {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.module {
+    width: 100%;
+    margin-bottom: 20px;
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+    > .title {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        font-weight: 900;
+        &.flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+    }
+    > .content {
+        display: block;
+        width: 100%;
+        &.body {
+            border-radius: 5px;
+            padding: 20px;
+            background-color: white;
+        }
+    }
+}

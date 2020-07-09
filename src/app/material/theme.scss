@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$cilts-primary: mat-palette($mat-blue, 700, 800, 900);
+$cilts-accent: mat-palette($mat-yellow, 700, 800, 900);
+$cilts-warn: mat-palette($mat-red);
+
+$cilts-theme: mat-light-theme($cilts-primary, $cilts-accent, $cilts-warn);
+
+@include angular-material-theme($cilts-theme);

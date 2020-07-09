@@ -1,0 +1,126 @@
+@import '../../../assets/scss/vars';
+
+header {
+    width: 100%;
+    background-color: white;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: $sh;
+    z-index: 95;
+}
+
+nav {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    background-color: $b-main;
+    ul {
+        display: block;
+        width: 100%;
+        > li {
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            > a {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                color: rgba(255, 255, 255, 0.15);
+                font-size: $fs-xs;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                transition: $trans;
+                > span {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    background-color: rgba(255, 255, 255, 0.15);
+                    margin-right: 10px;
+                    transition: $trans;
+                    > i {
+                        font-size: $fs-xs;
+                        color: $b-main;
+                    }
+                }
+                &:hover {
+                    color: white;
+                    background-color: rgba(255, 255, 255, 0.15);
+                    > span {
+                        background-color: white;
+                    }
+                }
+                &.active {
+                    color: white;
+                    background-color: rgba(255, 255, 255, 0.15);
+                    > span {
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.user {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    > .img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        background-color: white;
+        &.no-img {
+            background-color: transparent;
+            color: white;
+            > i {
+                font-size: 50px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    > .text {
+        display: inline-block;
+        width: auto;
+        > h6 {
+            display: block;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+            margin-bottom: -7.5px;
+        }
+        > sub {
+            font-weight: 100;
+            color: white;
+            font-size: $fs-xs;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+main {
+    width: 100%;
+    padding: 70px 20px 20px 320px;
+    position: relative;
+}

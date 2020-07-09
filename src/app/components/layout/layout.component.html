@@ -1,0 +1,47 @@
+<header>
+    <div class="options">
+        <button type="button" [matMenuTriggerFor]="menu" mat-icon-button color="primary">
+            <i class="fas fa-cog"></i>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>dialpad</mat-icon>
+                <span>Redial</span>
+            </button>
+            <button mat-menu-item disabled>
+                <mat-icon>voicemail</mat-icon>
+                <span>Check voice mail</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>notifications_off</mat-icon>
+                <span>Disable alerts</span>
+            </button>
+        </mat-menu>
+        <button type="button" mat-icon-button color="primary">
+            <i class="fas fa-sign-out-alt"></i>
+        </button>
+    </div>
+</header>
+<nav>
+    <div class="user">
+        <div class="img no-img">
+            <!-- <img src="#" alt="Usuario"> -->
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="text">
+            <h6>César Derma</h6>
+            <sub>Administrador</sub>
+        </div>
+    </div>
+    <ul>
+        <li *ngFor="let route of NavigationModel">
+            <a [routerLink]="route.url" [ngClass]="{'active' : route.url === currentUrlPath}">
+                <span><i class="fas" [ngClass]="route.icon"></i></span>
+                {{ route.text }}
+            </a>
+        </li>
+    </ul>
+</nav>
+<main [@routeAnimations]="prepareRoute()">
+    <router-outlet></router-outlet>
+</main>

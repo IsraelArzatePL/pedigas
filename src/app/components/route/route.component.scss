@@ -1,0 +1,38 @@
+@import '../../../assets/scss/vars';
+@import '../../../assets/scss/panels';
+
+.users {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .user {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        .name {
+            font-weight: 900;
+        }
+        .route {
+            font-size: $fs-xs;
+        }
+    }
+    &.as4 {
+        .user {
+            width: calc(100% / 4 - 15px);
+        }
+    }
+    &.as3 {
+        .user {
+            width: calc(100% / 4 - 13.33333333px);
+        }
+    }
+    &.as2 {
+        .user {
+            width: calc(100% / 4 - 20px);
+        }
+    }
+}

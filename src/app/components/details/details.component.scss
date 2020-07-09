@@ -1,0 +1,74 @@
+@import '../../../assets/scss/vars';
+@import '../../../assets/scss/panels';
+
+.users {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .user {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        .round-progress-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+            .info {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0px;
+                .quantity {
+                    font-size: $fs-sm;
+                    font-weight: 300;
+                }
+                .percentage {
+                    font-size: $fs-xb;
+                }
+            }
+        }
+        .name {
+            font-weight: 900;
+            margin-top: 20px;
+        }
+        .route {
+            font-size: $fs-xs;
+        }
+    }
+    &.as4 {
+        .user {
+            width: calc(100% / 4 - 15px);
+        }
+    }
+    &.as3 {
+        .user {
+            width: calc(100% / 4 - 13.33333333px);
+        }
+    }
+    &.as2 {
+        .user {
+            width: calc(100% / 4 - 20px);
+        }
+    }
+}
+
+.charts-container {
+    width: 100%;
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+round-progress {
+    width: 100% !important;
+    height: auto !important;
+}

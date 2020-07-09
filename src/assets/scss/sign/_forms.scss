@@ -1,0 +1,39 @@
+@import './vars';
+@import '../vars';
+
+form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &.pt {
+        padding-top: 20px;
+    }
+    > .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $b-main;
+        position: absolute;
+        top: -50px;
+        color: white;
+        i {
+            font-size: 25px;
+        }
+    }
+}
+
+.input-container {
+    width: 100%;
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+    &.right {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

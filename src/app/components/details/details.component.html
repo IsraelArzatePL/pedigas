@@ -1,0 +1,93 @@
+<div class="module">
+    <span class="title">Repartidores</span>
+    <div class="content">
+        <div class="users as4">
+            <div class="user">
+                <div class="round-progress-container">
+                    <round-progress
+                        [current]="70"
+                        [max]="100"
+                        [color]="'#1976d2'"
+                        [rounded]="true"
+                        [semicircle]="true"
+                        [duration]="600">
+                    </round-progress>
+                    <div class="info">
+                        <span class="quantity">Contenido en litros</span>
+                        <span class="percentage">70/100</span>
+                    </div>
+                </div>
+                <span class="name">César Derma</span>
+                <span class="route">Número de pipa: 12345</span>
+            </div>
+            <div class="user">
+                <div class="round-progress-container">
+                    <round-progress
+                        [current]="65"
+                        [max]="100"
+                        [color]="'#1976d2'"
+                        [rounded]="true"
+                        [semicircle]="true"
+                        [duration]="600">
+                    </round-progress>
+                    <div class="info">
+                        <span class="quantity">Contenido en litros</span>
+                        <span class="percentage">65/100</span>
+                    </div>
+                </div>
+                <span class="name">Felipe Fierro</span>
+                <span class="route">Número de pipa: 12345</span>
+            </div>
+            <div class="user">
+                <div class="round-progress-container">
+                    <round-progress
+                        [current]="93"
+                        [max]="100"
+                        [color]="'#1976d2'"
+                        [rounded]="true"
+                        [semicircle]="true"
+                        [duration]="600">
+                    </round-progress>
+                    <div class="info">
+                        <span class="quantity">Contenido en litros</span>
+                        <span class="percentage">93/100</span>
+                    </div>
+                </div>
+                <span class="name">Víctor Rodríguez</span>
+                <span class="route">Número de pipa: 12345</span>
+            </div>
+            <div class="user">
+                <div class="round-progress-container">
+                    <round-progress
+                        [current]="33"
+                        [max]="100"
+                        [color]="'#1976d2'"
+                        [rounded]="true"
+                        [semicircle]="true"
+                        [duration]="600">
+                    </round-progress>
+                    <div class="info">
+                        <span class="quantity">Contenido en litros</span>
+                        <span class="percentage">33/100</span>
+                    </div>
+                </div>
+                <span class="name">Israel Arzate</span>
+                <span class="route">Número de pipa: 12345</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="module">
+    <span class="title">Detalles del día de hoy</span>
+    <div class="container">
+        <div class="charts-container">
+                <canvas
+                    baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [chartType]="barChartType">
+                </canvas>
+        </div>
+    </div>
+</div>
